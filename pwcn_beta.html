@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<linkrel ="shortcut icon" href="icons/PW.ico">
+		<linkrel ="Bookmark" href="icons/PW.ico">
+			<title>PW Update Client | By Ruhong</title>
+			<meta content="text/html; charset=GB2312" http-equiv="Content-Type">
+			<SCRIPT LANGUAGE="JavaScript" src="/4399swf/js/chkDomain.js"></SCRIPT>
+			<script type='text/javascript' src='https://www.4399.com/js/jquery.min.js'></script>
+			<SCRIPT LANGUAGE="JavaScript" src="https://www.4399.com/UnityObject2.js" charset="utf-8"></SCRIPT>
+			<style>
+				html, body {
+					width: 100%;
+					height: 100%;
+					background: #F5F5F5;
+				}
+
+				.unity_bg {
+					width: 640px;
+					height: 480px;
+					background: url(https://imga.4399.com/upload_pic/install.png) no-repeat;
+					overflow: hidden;
+					margin: 0 auto;
+				}
+
+					.unity_bg a {
+						width: 190px;
+						height: 58px;
+						background: url(https://imga.4399.com/upload_pic/getunity.png) no-repeat;
+						overflow: hidden;
+						display: block;
+						margin: 100px auto 0;
+					}
+
+				table {
+					width: 100%;
+					height: 100%;
+					border: none;
+					border-collapse: collapse;
+					border-spacing: 0;
+				}
+
+					table td {
+						width: 100%;
+						height: 100%;
+					}
+			</style>
+			<script type="text/javascript">
+<!--
+				//һ��ֻ��Ҫ�������������Ϸ���Ƽ���
+				var gamename = "game_data/pwcn_beta.unity3d";
+
+				//disableExternalCall:true ������������ false ������������
+				//disableContextMenu true ���������Ҽ��˵� false ���������Ҽ��˵�
+				//disableFullscreen true ��������ȫ������ false ��������ȫ������
+
+				var config = {
+					//width: 960,
+					//height: 600,
+					params: {
+						backgroundcolor: "FFFFFF",
+						bordercolor: "FFFFFF",
+						textcolor: "FFFFFF",
+						logoimage: "logos/pwcn.png",
+						progressbarimage: "http://www.4399.com/images/bar_u.png",
+						progressframeimage: "http://www.4399.com/images/bg_u.png",
+						disableExternalCall: true,
+						disableContextMenu: true,
+						disableFullscreen: false,
+						enableDebugging: "1",
+						autoupdateURLSignature: "02a5f78b3066d7d31fb063186a2eec36fdf1205d49c6b0808eb37ef85ed9902e2e1904d87f599238a802ba0abbfe4f18aa82dd2eb5171e99ba839a5cea9e6ea9c1be9eae505937b56fe4a5fd254cffe08958d961f42d970136b5eab9e6c2cd08b81bc8a11e5ade57dc63dcfef2248d89689e4d4feed3cdfe7374c848fd57ebd4"
+					}
+				};
+
+				var u = new UnityObject2(config);
+				jQuery(function () {
+					var $missingScreen = jQuery("#unityPlayer").find(".missing");
+					var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+					$missingScreen.hide();
+					$brokenScreen.hide();
+					u.observeProgress(function (progress) {
+						switch (progress.pluginStatus) {
+							case "broken":
+								$brokenScreen.find("a").click(function (e) {
+									e.stopPropagation();
+									e.preventDefault();
+									u.installPlugin();
+									return false;
+								});
+								$brokenScreen.show();
+								break;
+							case "missing":
+								$missingScreen.find("a").click(function (e) {
+									e.stopPropagation();
+									e.preventDefault();
+									u.installPlugin();
+									return false;
+								});
+								$missingScreen.show();
+								break;
+							case "installed":
+								$missingScreen.remove();
+								break;
+							case "first":
+								break;
+						}
+					});
+					u.initPlugin(jQuery("#unityPlayer")[0], gamename);
+				});
+				function killErrors() { return true; }
+				window.onerror = killErrors;
+				-->
+			</script>
+			<SCRIPT TYPE="text/javascript" language="jvascript">
+				function BrowserLog(msg) {
+					try {
+						if (console != null) {
+							console.log(msg)
+						}
+					}
+					catch (ex) {
+
+					}
+
+					alert(msg)
+				}
+			</SCRIPT>
+			<meta name="DESCRIPTION" content="С��Ϸ,С��Ϸ4399.com����С��Ϸ,flashС��Ϸ,����С��Ϸ,С��Ϸ����,����С��Ϸ,����С��Ϸ,flash��Ϸ,����С��Ϸ,���С��Ϸ,S_GAMESORTС��Ϸ,qqС��Ϸ,������С��Ϸ,����С��Ϸ">
+			<meta name="keywords" content="С��Ϸ,С��Ϸ4399.com����С��Ϸ,flashС��Ϸ,����С��Ϸ,С��Ϸ����,����С��Ϸ,����С��Ϸ,flash��Ϸ,����С��Ϸ,���С��Ϸ,S_GAMESORTС��Ϸ,qqС��Ϸ,������С��Ϸ,����С��Ϸ">
+			<meta name="Author" content="4399.com����С��Ϸ">
+</head>
+<body bottommargin="0" leftmargin="0" topmargin="0" rightmargin="0" scroll="no" oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onselect="document.selection.empty()">
+<p align="center">
+<div id="unityPlayer">
+<div class="missing">
+<table border="0"><tr><td align="center"><div class="unity_bg"><a href="http://www.4399.com/UnityWebPlayer.exe"></a></div></td></tr></table>
+</div>
+<div class="broken">
+<a href="http://www.4399.com/UnityWebPlayer.exe" title="Unity Web Player. Install now! Restart your browser after install.">
+  <img alt="Unity Web Player. Install now! Restart your browser after install." src="https://www.4399.com/getunityrestart.png" width="193" height="63" />
+</a>
+</div>
+�޷�����Unity3D��Ϸ����ȷ����������������JAVASCRIPT֧��.</div>
+</p>
+</body>
+</html>
